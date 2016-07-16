@@ -4,7 +4,7 @@ import DirWalker from 'node-dirwalker';
 import confirm from 'confirm-cli';
 import colors from 'colors/safe';
 
-const files = gatherFiles(files => {
+gatherFiles(files => {
   listFiles(files);
 
   confirm("Are you sure you want to continue?", yes, no);
