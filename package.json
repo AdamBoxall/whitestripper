@@ -1,6 +1,6 @@
 {
   "name": "whitestripper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Strips out the unpleasant trailing whitespace in your project",
   "license": "MIT",
   "repository": {
