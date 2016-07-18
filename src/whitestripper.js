@@ -72,12 +72,15 @@ function processFile(filePath) {
   });
 }
 
-const matchNewLines = new RegExp(/(.*)(\r?\n)/g);
+const matchNewLines = new RegExp(/(.*)(\r?\n)?/g);
 function stripWhitespace(contents) {
   let line;
   let fixedContents = '';
   while (line = matchNewLines.exec(contents)) {
-    fixedContents += trim.right(line[1]) + line[2];
+    fixedContents += trim.right(line[1]);
+    if (line[2]) {
+      fixedContents += line[2];
+    }
   }
 
   return fixedContents;
